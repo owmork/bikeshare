@@ -1,15 +1,22 @@
-### Date created
-Include the date you created this project and README file.
+**Date of creation**
+The 'bikeshare project' was created on 19th of November 2019.
 
-### Project Title
-Replace the Project Title
+**Project Title**
+bikeshare
 
-### Description
-Describe what your project is about and what it does
+**Description**
+The project provides an interactive possibility to access the databased from a bikesharing company
+by setting filters based on location and dates.
+The data is split up in three cities (Washington, New York City, Chicago) and provides data from
+January 2017 to June 2017.
+It gives an overview about details like *Start Time, End Time, Trip Duration, Start Station, End
+Station, User Type and partly also Gender and Birth Year.*
 
-### Files used
-Include the files used
+**Files used**
+The files used consists of the raw data (csv) of the bikeshare system:
+* washington.csv
+* new_york_city.csv
+* chicago.csv
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+**Credits**
+Data was provided by **Motivate** and guidance was provided by **Udacity.**
