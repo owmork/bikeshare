@@ -24,7 +24,7 @@ def get_filters():
     while city not in CITY_DATA.keys():
         for keys in CITY_DATA.keys():
             print('- ', keys.title())
-        city = input("Choose one of the cities above: ").lower()
+        city = input('Choose one of the cities above: ').lower()
         print('\n')
 
     # get user input for month
@@ -32,7 +32,7 @@ def get_filters():
     while month not in months and month != 'all':
         for item in months:
             print('- ', item.title())
-        month = input("Choose on of the months above or 'all': ").lower()
+        month = input('Choose on of the months above or "all": ').lower()
         print('\n')
 
     # get user input for day of week
@@ -40,7 +40,7 @@ def get_filters():
     while day not in days and day != 'all':
         for item in days:
             print('- ', item.title())
-        day = input("Choose one of the weekdays above or 'all': ").lower()
+        day = input('Choose one of the weekdays above or "all": ').lower()
         print('\n')
 
 
@@ -108,7 +108,7 @@ def time_stats(df,month,day):
     print('- Most Frequent Start Time: Between {}:00 - {}:00'.format(popular_hour,popular_hour+1))
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
 
 def station_stats(df):
@@ -128,9 +128,9 @@ def station_stats(df):
     # display most frequent combination of start station and end station trip
     df_sorted = df.groupby(['Start Station', 'End Station']).size().sort_values(ascending=False).reset_index().head(1)
     print('- Most frequent combination of start and end station (Count):')
-    print(' ', df_sorted.iloc[0,0]," -> ", df_sorted.iloc[0,1], " [Count: ", df_sorted.iloc[0,2],"]")
+    print('  {} -> {} [Count: {}]'.format(df_sorted.iloc[0,0], df_sorted.iloc[0,1], df_sorted.iloc[0,2]))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
 
 def trip_duration_stats(df):
@@ -148,7 +148,7 @@ def trip_duration_stats(df):
     mean_travel_time = df['Travel Time'].mean()
     print('- Mean Travel Time:', mean_travel_time)
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    print('\nThis took %s seconds.' % (time.time() - start_time))
     print('-'*40)
 
 def user_stats(df,city):
